@@ -17,7 +17,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         super.viewDidLoad()
         
         arrData1 = ["Sarang", "Akshay", "Abhay", "Jayesh", "Rishabh"]
-        arrData2 = ["Blue", "Red", "Yellow", "Orange", "Green"]
+        arrData2 = ["Blue", "Red", "Yellow", "Orange", "Green", "Black"]
 
     }
     

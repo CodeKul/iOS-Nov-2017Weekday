@@ -18,8 +18,8 @@ class ViewController: UIViewController {
 
         lbl1 = UILabel(frame: CGRect(x: 10, y: 30, width: 300, height: 40))
         lbl1?.text = "Codekul"
-        lbl1?.textAlignment = .right
-        lbl1?.textColor = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
+        lbl1?.textAlignment = .center
+        lbl1?.textColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
         lbl1?.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
         
         self.view.addSubview(lbl1!)
