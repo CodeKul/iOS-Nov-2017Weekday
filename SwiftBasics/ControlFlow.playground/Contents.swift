@@ -2,8 +2,8 @@
 
 import UIKit
 
-var a = 20
-var b = 10
+var a = 10
+var b = 20
 
 if a > b {
     print("a is greater")
@@ -31,7 +31,7 @@ else {
  }
  */
 
-a = 0;
+a = 0
 while a < 10 {
     if a % 2 == 0 {
         print("CodeKul")
@@ -70,7 +70,7 @@ repeat {
 
 a = 5
 
-var range = 0..<100
+var range = 0...100
 
 range
 

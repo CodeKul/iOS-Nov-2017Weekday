@@ -17,6 +17,8 @@ array.append(10)
 
 array.remove(at: 9)
 
+array
+
 var resultArray = array + newArray
 
 for i in resultArray {
@@ -24,7 +26,7 @@ for i in resultArray {
 }
 
 for (index, value) in resultArray.enumerated() {
-    print("Item \(index + 1): \(value)")
+    print("Item \(index): \(value)")
 }
 
 // Sets
@@ -57,6 +59,8 @@ charsAnother.subtracting(chars)
 
 //Dictionaries
 
+// [key : value]
+
 var myDict = [1 : "Data1"]
 
 var myAnotherDict = [String : String]()
@@ -67,6 +71,8 @@ myAnotherDict.updateValue("MyData1", forKey: "first")
 
 myAnotherDict["first"]
 myAnotherDict["second"] = "MyData2"
+
+myAnotherDict["first"] = "MyDataFirst"
 
 myAnotherDict
 
