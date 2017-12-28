@@ -36,7 +36,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         print("section: \(indexPath.section)\nrow: \(indexPath.row)")
     }
     
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
