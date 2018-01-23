@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MultiThreadingDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Z5q-Js-pjG">
+                                <rect key="frame" x="145" y="318" width="84" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cH-1h-Qa1">
+                                        <rect key="frame" x="0.0" y="0.0" width="84" height="30"/>
+                                        <state key="normal" title="Show image"/>
+                                        <connections>
+                                            <segue destination="62b-pH-PtS" kind="show" id="eGL-5Z-X17"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.81895424482833179" green="1" blue="0.46786783943909838" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Z5q-Js-pjG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SU3-fm-FDQ"/>
+                            <constraint firstItem="Z5q-Js-pjG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mOt-XP-Xp0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Show Image View Controller-->
+        <scene sceneID="vWt-Wd-xOy">
+            <objects>
+                <viewController id="62b-pH-PtS" customClass="ShowImageViewController" customModule="MultiThreadingDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3h4-BR-G6N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="235-Un-V23">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="SCD-KM-Olr">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" red="1" green="0.0083371862763818028" blue="0.040891368959202201" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="235-Un-V23" firstAttribute="leading" secondItem="fsi-nN-TnM" secondAttribute="leading" id="KDv-oo-pri"/>
+                            <constraint firstItem="235-Un-V23" firstAttribute="bottom" secondItem="fsi-nN-TnM" secondAttribute="bottom" id="XNY-32-zXk"/>
+                            <constraint firstItem="235-Un-V23" firstAttribute="trailing" secondItem="fsi-nN-TnM" secondAttribute="trailing" id="Xqo-T6-Qrp"/>
+                            <constraint firstItem="235-Un-V23" firstAttribute="top" secondItem="3h4-BR-G6N" secondAttribute="top" id="aUA-jI-hYU"/>
+                            <constraint firstItem="SCD-KM-Olr" firstAttribute="centerX" secondItem="3h4-BR-G6N" secondAttribute="centerX" id="i8N-5l-Ea7"/>
+                            <constraint firstItem="SCD-KM-Olr" firstAttribute="centerY" secondItem="3h4-BR-G6N" secondAttribute="centerY" id="lko-GE-vY4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fsi-nN-TnM"/>
+                    </view>
+                    <connections>
+                        <outlet property="myImageView" destination="235-Un-V23" id="Bgr-q6-dBl"/>
+                        <outlet property="myLoader" destination="SCD-KM-Olr" id="Oaf-AN-1HO"/>
+                        <outlet property="view" destination="3h4-BR-G6N" id="Mud-Wo-fmj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="klu-jT-xET" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1578" y="33"/>
+        </scene>
+    </scenes>
+</document>
