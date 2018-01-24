@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AdaptiveLayoutDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="To6-s4-XlB">
+                                <rect key="frame" x="139" y="318.5" width="97" height="30"/>
+                                <state key="normal" title="iPhone Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fga-l4-QWD">
+                                <rect key="frame" x="132" y="20" width="111" height="30"/>
+                                <state key="normal" title="Comman Button">
+                                    <color key="titleColor" red="1" green="0.0083371862760000005" blue="0.04089136896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRA-Tj-gdn">
+                                <rect key="frame" x="286" y="482" width="196" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="iPad Button">
+                                    <color key="titleColor" red="1" green="0.0083371862760000005" blue="0.04089136896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fRA-Tj-gdn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0yw-ZK-rUe"/>
+                            <constraint firstItem="To6-s4-XlB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CHH-tp-bpM"/>
+                            <constraint firstItem="fRA-Tj-gdn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CTr-Qp-6Fq"/>
+                            <constraint firstItem="Fga-l4-QWD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="h4x-hD-1gT"/>
+                            <constraint firstItem="To6-s4-XlB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uk0-SH-mlv"/>
+                            <constraint firstItem="Fga-l4-QWD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zlx-st-FVn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="To6-s4-XlB"/>
+                                <exclude reference="fRA-Tj-gdn"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="0yw-ZK-rUe"/>
+                                <exclude reference="CTr-Qp-6Fq"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="To6-s4-XlB"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="fRA-Tj-gdn"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="0yw-ZK-rUe"/>
+                                <include reference="CTr-Qp-6Fq"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
